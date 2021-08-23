@@ -12,19 +12,12 @@ const FooterList = styled.ul `{
         justify-content:center; 
     }`;
 
-// const FooterItemLinks = styled.ul `{    
-//         display:flex;
-//         justify-content:center; 
-//         border: 1px solid red;
-
-//     }`;
-
 const FooterItem = styled.li `{     
         display:inline;
         margin:1rem;  
     }`;
 
-const StyledIcon = styled.a `{     
+const Icons = styled.a `{     
         color: white;
         text-decoration: none;
         :hover {
@@ -32,7 +25,7 @@ const StyledIcon = styled.a `{
       }
     }`;
 
-    const StyledIconSocial = styled.a `{  
+    const IconSocial = styled.a `{  
         color: black;   
         background-color: white;
         padding: 5px;
@@ -42,7 +35,6 @@ const StyledIcon = styled.a `{
         opacity: 0.7;
       }
     }`;
-
 
 const links= [
     {
@@ -72,26 +64,26 @@ const Footer= () => {
             <FooterList>
                 {links.map((link,index)=>(
                     <FooterItem key={index}>
-                        <StyledIconSocial href={link.src}>
+                        <IconSocial href={link.src}>
                             <FontAwesomeIcon 
                                 icon={link.icon}
                             >
                             </FontAwesomeIcon>
-                        </StyledIconSocial>
+                        </IconSocial>
                     </FooterItem>
                 ))}
             </FooterList>
 
             <FooterList>
                 <FooterItem>
-                    <StyledIcon href="#">
+                    <Icons href="#">
                         Terms of Service
-                    </StyledIcon>
+                    </Icons>
                 </FooterItem>
                 <FooterItem>
-                    <StyledIcon href="#">
+                    <Icons href="#">
                         Privacy
-                    </StyledIcon>
+                    </Icons>
                 </FooterItem>
             </FooterList>
         </FooterContainer>
