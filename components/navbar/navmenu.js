@@ -8,7 +8,7 @@ const StyledNavBar = styled.nav`
     background: #222;
     display:flex;
     justify-content:space-between;
-    min-height: 2rem;
+    min-height: 2.5rem;
     align-items: center;
 }
 `;
