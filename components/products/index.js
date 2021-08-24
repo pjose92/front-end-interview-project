@@ -4,7 +4,7 @@ const ProductGrid = styled.ul`{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 1rem;
-    margin-top: 1.25rem;
+    margin: 20px auto;
     }
     @media (max-width: 600px) {
         grid-template-columns: repeat(2, 1fr);
@@ -12,13 +12,14 @@ const ProductGrid = styled.ul`{
 
 const Img = styled.img`{
     width: 200px;
-    transition: all .2s ease-in-out;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
     :hover { 
         transform: scale(1.08)
         }; 
     }
     @media (max-width: 1059px) {
-        width: 95%;
+        width: 100%;
         }`;
 
 const Price = styled.p`{
