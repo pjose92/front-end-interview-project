@@ -13,7 +13,7 @@ const NavBar = styled.nav`{
 }`;
 
 const Logo =styled.a`{
-    font-weight: 900;
+    font-weight: 400;
     font-size: 32px;
     letter-spacing: .3rem;
     text-transform: uppercase;
@@ -38,7 +38,7 @@ const Links = styled.a`{
     text-decoration: none;
 }
    :hover {
-        opacity: 0.5;
+        opacity: 0.8;
     }
     @media (max-width: 800px) {
         :hover {
@@ -49,7 +49,7 @@ const Links = styled.a`{
 
 const CheckoutIcon =styled.li`{
     font-size: 20px;
-    margin:1rem;
+    margin:1.5rem;
     list-style-type: none;
 }`;
 
@@ -64,6 +64,7 @@ const MobileMenu = styled.ul `{
     height: 100%;
     border-radius: 3px;
 }`;
+
 const DesktopMenu = styled.ul `{  
     list-style-type: none;
     display:flex;
