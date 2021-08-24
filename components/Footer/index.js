@@ -3,38 +3,50 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLink, faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import { faInstagram, faTwitter, faFacebook } from '@fortawesome/free-brands-svg-icons';
 
-const FooterContainer = styled.footer `{    
-        background: #121212; 
-    }`;
-
 const FooterList = styled.ul `{    
-        display:flex;
-        justify-content:center; 
-    }`;
+    display:flex;
+    justify-content:center; 
+}`;
 
 const FooterItem = styled.li `{     
-        display:inline;
-        margin:1rem;  
+    display:inline;
+    margin:1rem;  
+}`;
+
+const IconSocial = styled.a `{  
+    color: black;   
+    background-color: white;
+    padding: 15%;
+    border-radius: 10px;
+    text-decoration: none;
+    :hover {
+    opacity: 0.7;
+    }
+}`;
+
+const FooterStyle = styled.footer`
+    background: black;
+    height: 146px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column nowrap;
+    div {
+        width: 60%;
+        margin: 1%;
+        diplay: flex;
+        flex-flow: row nowrap;
+        align-items: space-around;
+        justify-content: space-between;
     }`;
 
-const Icons = styled.a `{     
-        color: white;
-        text-decoration: none;
-        :hover {
-        opacity: 0.7;
-      }
-    }`;
+const PrivacyTerms = styled.a`{
+    color: white;
+    margin: 0 3%;
+    text-decoration: none;
 
-    const IconSocial = styled.a `{  
-        color: black;   
-        background-color: white;
-        padding: 5px;
-        border-radius: 15px;
-        text-decoration: none;
-        :hover {
-        opacity: 0.7;
-      }
-    }`;
+}`
 
 const links= [
     {
@@ -58,35 +70,34 @@ const links= [
     }
 ];
 
-const Footer= () => {
-    return (
-        <FooterContainer>
-            <FooterList>
-                {links.map((link,index)=>(
-                    <FooterItem key={index}>
-                        <IconSocial href={link.src}>
-                            <FontAwesomeIcon 
-                                icon={link.icon}
-                            >
-                            </FontAwesomeIcon>
-                        </IconSocial>
-                    </FooterItem>
+const Footer = () => {
+  return (
+    <FooterStyle>
+      <div>
+        <FooterList>
+            {links.map((link,index)=>(                     
+            <FooterItem key={index}>
+                <IconSocial href={link.src}>
+                    <FontAwesomeIcon 
+                        icon={link.icon}
+                    >
+                    </FontAwesomeIcon>
+                </IconSocial>
+            </FooterItem>
                 ))}
-            </FooterList>
+         </FooterList>
+       
+      </div>
+      <div>
+          <PrivacyTerms href="#">
+            Terms of Service
+          </PrivacyTerms> 
+          <PrivacyTerms href="#">
+            Privacy
+          </PrivacyTerms>
+     </div>
+    </FooterStyle>
+  )
+}
 
-            <FooterList>
-                <FooterItem>
-                    <Icons href="#">
-                        Terms of Service
-                    </Icons>
-                </FooterItem>
-                <FooterItem>
-                    <Icons href="#">
-                        Privacy
-                    </Icons>
-                </FooterItem>
-            </FooterList>
-        </FooterContainer>
-    );
-};
 export default Footer;
